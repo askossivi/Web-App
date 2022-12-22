@@ -62,7 +62,7 @@ pipeline{
                     }
                  }
 		 
-		stage('ansible playbook'){
+		stage('K8s Deployment'){
 		steps{
 		    script{
 		      echo "triggering k8s-sample-web-app-deployment job"
