@@ -37,7 +37,7 @@ pipeline{
               stage('Build Maven App'){
               steps{
                   script{
-		   sh "mvn clean install"
+		   sh "mvn clean install -f spring-k8s-discoveryclient/pom.xml"
                        }
                     }
                  }
