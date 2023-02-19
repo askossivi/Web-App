@@ -22,7 +22,7 @@ pipeline{
                   steps{
                       script{
                       withSonarQubeEnv('sonarserver') { 
-                      sh "mvn sonar:sonar"
+                      sh "mvn sonar:sonar -f spring-k8s-discoveryclient/pom.xml"
                        }
                       timeout(time: 1, unit: 'HOURS') {
                       def qg = waitForQualityGate()
